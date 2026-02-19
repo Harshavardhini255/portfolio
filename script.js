@@ -17,7 +17,7 @@ window.addEventListener("resize", resizeCanvas);
 
 // Generate frame path
 const framePath = (index) =>
-  `frames/ezgif-frame-${String(index).padStart(3, "0")}.jpg`;
+  `frame/ezgif-frame-${String(index).padStart(3, "0")}.jpg`;
 
 // Preload images
 function preloadImages() {

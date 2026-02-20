@@ -1,22 +1,268 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scroll Animation</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harsha Vardhini | Portfolio</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#000;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Canvas Background */
+#animationCanvas{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-2;
+}
+
+/* Dark overlay for readability */
+.overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.4);
+    z-index:-1;
+}
+
+/* Main container */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:60px 20px;
+}
+
+/* Header */
+header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+header h1{
+    font-size:3rem;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+header p{
+    font-size:1.2rem;
+    opacity:0.9;
+}
+
+/* Glass sections */
+.section{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.2);
+    padding:30px;
+    border-radius:20px;
+    margin-bottom:40px;
+    transition:0.3s ease;
+}
+
+.section:hover{
+    background:rgba(255,255,255,0.12);
+    transform:translateY(-5px);
+}
+
+.section h2{
+    margin-bottom:20px;
+    font-weight:600;
+    border-left:4px solid #00e0ff;
+    padding-left:10px;
+}
+
+ul{
+    margin-left:20px;
+    margin-top:10px;
+}
+
+li{
+    margin-bottom:8px;
+}
+
+a{
+    color:#00e0ff;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    opacity:0.7;
+    font-size:14px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    header h1{
+        font-size:2.2rem;
+    }
+}
+</style>
 </head>
+
 <body>
 
-  <section class="scroll-container">
-    <canvas id="scrollCanvas"></canvas>
-  </section>
+<canvas id="animationCanvas"></canvas>
+<div class="overlay"></div>
 
-  <section class="content">
-    <h1>Scroll Down</h1>
-    <p>This section creates scroll space for the animation.</p>
-  </section>
+<div class="container">
 
-  <script src="script.js"></script>
+<header>
+    <h1>Harsha Vardhini</h1>
+    <p>Aspiring Data Analyst | AI & Data Enthusiast</p>
+</header>
+
+<section class="section">
+<h2>Contact</h2>
+<p>Tamil Nadu, India</p>
+<p>Email: harshabalan205@gmail.com</p>
+<p>Phone: 6383370780</p>
+<p>LinkedIn: 
+<a href="https://www.linkedin.com/in/harsha-vardhini-19373732a" target="_blank">
+linkedin.com/in/harsha-vardhini-19373732a
+</a></p>
+<p>GitHub: 
+<a href="https://github.com/Harshavardhini255" target="_blank">
+github.com/Harshavardhini255
+</a></p>
+</section>
+
+<section class="section">
+<h2>Profile</h2>
+<p>
+I am an aspiring Data Analyst pursuing B.E. in Electronics and Communication Engineering 
+at Government College of Engineering, Tirunelveli. I have hands-on internship experience 
+in AI-driven data analysis and Large Language Models (LLMs).
+</p>
+</section>
+
+<section class="section">
+<h2>Education</h2>
+<p><strong>B.E. – Electronics and Communication Engineering</strong></p>
+<p>Government College of Engineering, Tirunelveli</p>
+<p>Expected Graduation: 2027</p>
+</section>
+
+<section class="section">
+<h2>Technical Skills</h2>
+<ul>
+<li><strong>Programming:</strong> Python, SQL, Java</li>
+<li><strong>Data Analysis:</strong> Pandas, NumPy, MS Excel</li>
+<li><strong>Database:</strong> MySQL</li>
+<li><strong>Visualization:</strong> Matplotlib, Power BI</li>
+<li><strong>Tools:</strong> Git, GitHub, Google Colab, AI Tools</li>
+</ul>
+</section>
+
+<section class="section">
+<h2>Projects</h2>
+
+<p><strong>Library Management System | SQL, MySQL</strong></p>
+<ul>
+<li>Designed normalized relational schema.</li>
+<li>Performed DDL/DML with constraints.</li>
+<li>Developed complex SQL reporting queries.</li>
+</ul>
+
+<br>
+
+<p><strong>Hill Climbing Algorithm | Python, AI</strong></p>
+<ul>
+<li>Implemented heuristic optimization algorithm.</li>
+<li>Designed evaluation functions.</li>
+<li>Analyzed local maxima & convergence issues.</li>
+</ul>
+</section>
+
+<section class="section">
+<h2>Experience</h2>
+
+<p><strong>Data Analyst Intern – VOIS (AICTE)</strong></p>
+<p>Sep 2025 – Oct 2025 | Remote</p>
+<ul>
+<li>Conversational data analysis using LLMs.</li>
+<li>Dataset analysis using Python & SQL.</li>
+<li>Applied prompt engineering techniques.</li>
+</ul>
+
+<br>
+
+<p><strong>Data Analyst Intern – IPCS Global Pvt Ltd</strong></p>
+<p>Jul 2025 – Aug 2025</p>
+<ul>
+<li>Data cleaning & exploratory analysis.</li>
+<li>Created trend visualizations.</li>
+</ul>
+</section>
+
+</div>
+
+<footer>
+© 2026 Harsha Vardhini | Portfolio
+</footer>
+
+<script>
+const canvas = document.getElementById("animationCanvas");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
+const totalFrames = 240;
+const images = [];
+
+for(let i=1;i<=totalFrames;i++){
+    const img = new Image();
+    const frame = String(i).padStart(3,'0');
+    img.src = `frames/ezgif-frame-${frame}.jpg`;
+    images.push(img);
+}
+
+function render(){
+    const scrollTop = window.scrollY;
+    const maxScroll = document.body.scrollHeight - window.innerHeight;
+    const scrollFraction = scrollTop / maxScroll;
+
+    const frameIndex = Math.min(
+        totalFrames - 1,
+        Math.floor(scrollFraction * totalFrames)
+    );
+
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.drawImage(images[frameIndex],0,0,canvas.width,canvas.height);
+}
+
+window.addEventListener("scroll",render);
+</script>
+
 </body>
 </html>

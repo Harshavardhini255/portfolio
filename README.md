@@ -42,11 +42,30 @@ Static files only — push the folder to GitHub Pages, Netlify, Vercel, Cloudfla
 
 ```
 index.html          all markup and copy
+work/*.html         one detail page per project (generated)
 assets/styles.css   design tokens, layout, responsive rules, animations
 assets/script.js    reveals, filters, accordion, counters, nav, mobile menu
+assets/work.css     detail-page styles
+assets/work.js      detail-page reveals, progress bar, prev/next
 assets/portrait.jpg hero portrait
+tools/site_data.py              project content for the detail pages
+tools/build_work_pages.py      regenerates work/*.html from that data
 deploy.ps1          one-command commit + push + deploy
 ```
+
+## Project detail pages
+
+Every card in **Work** opens its own page under `work/`, so each project has a URL you can share or put on a résumé. Each page has the overview, what was built, a results row, the stack and tags, a GitHub link where a public repo exists, and previous/next navigation.
+
+Those pages are generated, so edit the data rather than the HTML:
+
+```bash
+python tools/build_work_pages.py
+```
+
+Change a title, a bullet, a metric or a repo URL in `tools/site_data.py`, re-run the command, then `.\deploy.ps1`. The generator writes the HTML into `work/`, which is committed to the repo — GitHub Pages just publishes the committed files, so nothing runs on GitHub's side.
+
+To add a project, append a dict to `PROJECTS` in `tools/site_data.py` and re-run. Add the matching card to the `#workGrid` block in `index.html` by hand, and keep its `data-kind` equal to one of the filter ids.
 
 ## Editing content
 

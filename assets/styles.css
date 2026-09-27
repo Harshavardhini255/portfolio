@@ -547,11 +547,18 @@ svg{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.5;stroke-l
   grid-template-columns:repeat(3,minmax(0,1fr));
 }
 .card{
+  position:relative;
   display:flex;
   flex-direction:column;
   transition:opacity .45s var(--ease),transform .45s var(--ease);
 }
 .card.is-hidden{display:none}
+.card__title a::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+}
 .card__visual{
   position:relative;
   display:grid;
@@ -650,6 +657,26 @@ svg{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.5;stroke-l
   color:rgba(244,242,237,.4);
   max-width:26ch;
 }
+.card__tail{
+  position:relative;
+  z-index:2;
+  display:inline-flex;
+  align-items:center;
+  gap:.6rem;
+  flex:none;
+}
+.card__code{
+  font-family:var(--mono);
+  font-size:.625rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:rgba(244,242,237,.55);
+  border:1px solid rgba(244,242,237,.22);
+  border-radius:999px;
+  padding:.35rem .7rem;
+  transition:background .4s var(--ease),color .4s var(--ease),border-color .4s var(--ease);
+}
+.card__code:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}
 .card__go{
   display:grid;
   place-items:center;
@@ -660,8 +687,7 @@ svg{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.5;stroke-l
   transition:background .4s var(--ease),color .4s var(--ease),border-color .4s var(--ease),transform .4s var(--ease);
 }
 .card__go svg{width:1rem;height:1rem}
-.card__go:hover{background:var(--paper);color:var(--ink);border-color:var(--paper);transform:translate(3px,-3px)}
-.card__go--off{opacity:.22;pointer-events:none}
+.card:hover .card__go{background:var(--paper);color:var(--ink);border-color:var(--paper);transform:translate(3px,-3px)}
 
 .stack{padding-block:clamp(4rem,9vw,8rem)}
 .acc__item{border-bottom:1px solid var(--line)}

@@ -6,8 +6,8 @@ param(
 $ErrorActionPreference = "Continue"
 Set-Location -LiteralPath $PSScriptRoot
 
-$REPO_URL = "https://github.com/Harshavardhini255/hv-portfolio"
-$LIVE_URL = "https://harshavardhini255.github.io/hv-portfolio/"
+$REPO_URL = "https://github.com/Harshavardhini255/portfolio"
+$LIVE_URL = "https://harshavardhini255.github.io/portfolio/"
 
 $branch = (git rev-parse --abbrev-ref HEAD).Trim()
 if ($branch -ne "main") {

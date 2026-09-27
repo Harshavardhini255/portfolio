@@ -2,7 +2,7 @@
 
 A single-page, zero-dependency portfolio site. No build step, no framework, no npm install.
 
-**Live:** <https://harshavardhini255.github.io/hv-portfolio/>
+**Live:** <https://harshavardhini255.github.io/portfolio/>
 
 ## Run it
 

@@ -556,7 +556,7 @@ svg{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.5;stroke-l
 .card__cover{
   position:absolute;
   inset:0;
-  z-index:3;
+  z-index:10;
   border-radius:.4rem;
   pointer-events:auto;
 }
@@ -616,7 +616,7 @@ svg{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.5;stroke-l
 .card__year{font-family:var(--mono);font-size:.6875rem;color:rgba(244,242,237,.4);letter-spacing:.1em}
 .card__title{
   position:relative;
-  z-index:2;
+  z-index:1;
   font-family:var(--serif);
   font-weight:400;
   font-size:clamp(1.375rem,2.2vw,1.75rem);

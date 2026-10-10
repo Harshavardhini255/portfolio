@@ -556,8 +556,9 @@ svg{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.5;stroke-l
 .card__cover{
   position:absolute;
   inset:0;
-  z-index:1;
+  z-index:3;
   border-radius:.4rem;
+  pointer-events:auto;
 }
 .card__cover:focus-visible{
   outline:2px solid var(--paper);

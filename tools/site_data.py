@@ -84,7 +84,7 @@ PROJECTS = [
         "year": "2025",
         "stack": ["Power BI", "DAX", "Data Modeling"],
         "tags": ["DAX", "Slicers", "KPI"],
-        "href": None,
+        "href": "https://github.com/Harshavardhini255/blinkit-power-bi-analysis",
         "overview": (
             "An interactive retail sales dashboard built to replace manual reporting. It models "
             "the sales data, defines the measures in DAX, and exposes the result through KPI cards "
@@ -112,7 +112,7 @@ PROJECTS = [
         "year": "2025",
         "stack": ["Python", "Pandas", "Seaborn"],
         "tags": ["EDA", "Statistical Modelling", "Viz"],
-        "href": None,
+        "href": "https://github.com/Harshavardhini255/VOIS_AICTE_Oct2025_MajorProject_Harshavardini_S",
         "overview": (
             "Exploratory data analysis and statistical modelling over a real-world catalogue of "
             "titles, aimed at identifying content trends, genre distribution and release patterns. "
@@ -139,7 +139,7 @@ PROJECTS = [
         "year": "2025",
         "stack": ["Python", "Web Scraping", "ETL"],
         "tags": ["Scraping", "ETL", "Pricing"],
-        "href": None,
+        "href": "https://github.com/Harshavardhini255/flipcart-webscrapping",
         "overview": (
             "A data engineering project that starts with the collection problem: product and pricing "
             "data pulled from Flipkart through Python-based scraping, then run through ETL and "
@@ -162,7 +162,7 @@ PROJECTS = [
         "year": "2025",
         "stack": ["SQL", "MySQL"],
         "tags": ["Normalisation", "Joins", "Tuning"],
-        "href": None,
+        "href": "https://github.com/Harshavardhini255/sql-library-management-system",
         "overview": (
             "A normalised relational schema for library operations, built with DDL and DML "
             "operations and enforced key constraints. The interesting part is the tuning: the "

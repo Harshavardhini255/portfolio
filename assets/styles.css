@@ -553,11 +553,15 @@ svg{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.5;stroke-l
   transition:opacity .45s var(--ease),transform .45s var(--ease);
 }
 .card.is-hidden{display:none}
-.card__title a::after{
-  content:"";
+.card__cover{
   position:absolute;
   inset:0;
   z-index:1;
+  border-radius:.4rem;
+}
+.card__cover:focus-visible{
+  outline:2px solid var(--paper);
+  outline-offset:4px;
 }
 .card__visual{
   position:relative;
@@ -610,6 +614,8 @@ svg{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.5;stroke-l
 }
 .card__year{font-family:var(--mono);font-size:.6875rem;color:rgba(244,242,237,.4);letter-spacing:.1em}
 .card__title{
+  position:relative;
+  z-index:2;
   font-family:var(--serif);
   font-weight:400;
   font-size:clamp(1.375rem,2.2vw,1.75rem);
@@ -664,7 +670,9 @@ svg{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.5;stroke-l
   align-items:center;
   gap:.6rem;
   flex:none;
+  pointer-events:none;
 }
+.card__tail a{pointer-events:auto}
 .card__code{
   font-family:var(--mono);
   font-size:.625rem;
